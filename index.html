@@ -1,44 +1,93 @@
+<!-- Declares HTML 5 -->
 <!DOCTYPE html>
+
+<!-- Start HTML Section -->
 <html>
 
+<!-- Start Head Section -->
 <head>
-  
+
+  <!-- Sets Character Set UTF-8 -->
   <meta charset="utf-8">
+
+  <!-- Sets Viewing Dimensions -->
   <meta name="viewport" content="width=device-width">
+
+  <!-- Sets Website Title (Browser Display) -->
   <title>alpfaresumeeditor</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
 
+  <!-- Includes/Links Style.css File -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+  <!-- Start Body Section (Creates a BLACK Background Display) -->
   <body style="background-color: black">
-    
+
+    <!-- Start Main-Container Section -->
     <div class="main-container">
+
+      <!-- Start Resume-Preview Section -->
       <div class="resume-preview">
+
+        <!-- Uploads Resume Display Template Image -->
         <img src="CustomResume.jpg" width="662" height="800">
-          </div>
-            <div class="content-right">
 
-              <div class="header-container">
-                <div class="logo-container">
-                  <img src="https://029d582b41ea63c84ad8.cdn6.editmysite.com/uploads/b/029d582b41ea63c84ad8b99e7254a51e75d658859e4c1cdbf9bdca64e0ec3f5b/ALPFAlogo_white_smaller_1723511728.png?width=2400&optimize=medium" width="200" height="200">
-                </div>
-                <h1 class="title">
-                  <p style="font-size:80px"> <I>ALPFA UCF <br> RESUME EDITOR</I></p>
-                </h1>
-              </div> 
+      </div>
 
-              <h4> 
-                <p style="font-size:40px;color:white;font-family:Helvetica;"> <I> Upgrade your Resume Based on ALPFA Standards! </I> </p>
-              </h4> 
+      <!-- Start Content (Right Side) Section -->
+      <div class="content-right">
 
-              <div class="button-container">
-                <input type="file" id="fileInput" accept=".pdf,.doc,.docx" style="display: none">
-                <button type="button" onclick="document.getElementById('fileInput').click()">Upload Resume</button>
-              </div>
-            </div>
+        <!-- Start Header-Container Section -->
+        <div class="header-container">
+
+          <!-- Start Logo-Container Section -->
+          <div class="logo-container">
+
+            <!-- Uploads ALPFA Logo -->
+            <img src="https://029d582b41ea63c84ad8.cdn6.editmysite.com/uploads/b/029d582b41ea63c84ad8b99e7254a51e75d658859e4c1cdbf9bdca64e0ec3f5b/ALPFAlogo_white_smaller_1723511728.png?width=2400&optimize=medium" width="200" height="200">
+
           </div>
 
-        <script src="script.js"></script>
+          <!-- Start Title(size h1) Section -->
+          <h1 class="title">
 
-      </body>
+            <!-- Inserts "ALPFA UCF RESUME EDITOR" Title -->
+            <p style="font-size:80px"> <I>ALPFA UCF <br> RESUME EDITOR</I></p>
 
-      </html>
+          </h1>
+
+        </div> 
+
+        <!-- Start Comment(size h4) Section -->
+        <h4> 
+
+          <!-- Inserts "Upgrade your Resume Based on ALPFA Standards!" Comment -->
+          <p style="font-size:40px;color:white;font-family:Helvetica;"> <I> Upgrade your Resume Based on ALPFA Standards! </I> </p>
+
+        </h4> 
+
+        <!-- Start Button-Container Section -->
+        <div class="button-container">
+
+          <!-- Start Form-Upload Section -->
+          <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+
+            <!-- Start File-Input Section -->
+            <input type="file" id="fileInput" name="resume" accept=".pdf,.doc,.docx" style="display: none">
+            <button type="button" onclick="document.getElementById('fileInput').click()">Upload Resume</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Includes/Links Script.js File -->
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

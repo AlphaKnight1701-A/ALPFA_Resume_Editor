@@ -1,0 +1,14 @@
+[project]
+name = "python-template"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+requires-python = ">=3.11"
+dependencies = [
+    "docx>=0.2.4",
+    "flask>=3.1.0",
+    "fpdf2>=2.8.2",
+    "fpdf>=1.7.2",
+    "pdfminer>=20191125",
+    "werkzeug>=3.1.3",
+]
